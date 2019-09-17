@@ -50,7 +50,7 @@ class Stage2 extends React.Component {
   render() {
     const { onSubmit, previousMeal } = this.props;
     const recipe = recipes[previousMeal];
-    const { title, ingredients } = recipe;
+    const { ingredients } = recipe;
     const { selectedItems } = this.state;
     return (
       <div>

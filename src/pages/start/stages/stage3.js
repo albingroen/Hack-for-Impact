@@ -7,18 +7,7 @@ import groceries from "../../../data/groceries.json";
 const Stage3 = ({ leftovers, onSubmit }) => {
   //   Stage 3 - Do you also have this ingredient?
   const [selectedItems, setSelectedItems] = useState([]);
-
   const leftoversTitles = leftovers.map(l => l.title);
-  const groceriesTitles = leftovers.map(g => g.title);
-
-  const selectItem = item => {
-    if (this.state.selectedItems.indexOf(item) === -1) {
-      setSelectedItems([...this.state.selectedItems, item]);
-    } else {
-      const newItems = _.pull(this.state.selectedItems, item);
-      setSelectedItems(newItems);
-    }
-  };
 
   return (
     <div>

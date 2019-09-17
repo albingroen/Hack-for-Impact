@@ -16,7 +16,6 @@ const HeaderContainer = styled.div`
 
 const Plan = ({}) => {
   const [stages, setActiveStages] = useState([0]);
-  // const [ingredients, setIngredients] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [chosenRecipe, setChosenRecipe] = useState();
 
@@ -58,18 +57,14 @@ const Plan = ({}) => {
             onSubmit={selectedItems => {
               setSelectedItems(selectedItems);
               setActiveStage(3);
-            }
-            }
+            }}
           />
         </StageWrapper>
       )}
 
-      { stages.includes(3) && (
+      {stages.includes(3) && (
         <StageWrapper>
-          <Stage3
-            selectedItems={selectedItems}
-            chosenRecipe={chosenRecipe}
-          />
+          <Stage3 selectedItems={selectedItems} chosenRecipe={chosenRecipe} />
         </StageWrapper>
       )}
     </div>
