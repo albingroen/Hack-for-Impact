@@ -10,7 +10,16 @@ const Start = ({}) => {
   const [leftovers, setLeftovers] = useState([]);
 
   return (
-    <div style={{ padding: "50px" }}>
+    <div
+      style={{
+        maxWidth: "500px",
+        background: "white",
+        height: "100vh",
+        margin: "100px auto",
+        padding: "20px",
+        borderRadius: "20px"
+      }}
+    >
       <h1>What do you want to do?</h1>
       <Button>I have leftovers</Button>
       <Button>I want to plan my meals</Button>
