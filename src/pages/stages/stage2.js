@@ -5,6 +5,7 @@ import SelectList from "../../components/selectList";
 import _ from "lodash";
 
 import recipes from "../../data/recipes";
+import RecipeCard from "../../components/RecipeCard";
 
 class Stage2 extends React.Component {
   state = {
@@ -28,10 +29,10 @@ class Stage2 extends React.Component {
     const recipe = recipes[previousMeal];
     const { title, ingredients } = recipe;
     const { selectedItems } = this.state;
-
     return (
       <div>
-        <h2>You've selected last time {title}</h2>
+        <h2>You've selected last time</h2>
+        <RecipeCard recipe={recipe} />
         <div>Tell us what has left over</div>
         <SelectList
           items={ingredients}
