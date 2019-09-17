@@ -55,18 +55,23 @@ const Plan = ({}) => {
         <StageWrapper>
           <Stage2
             chosenRecipe={chosenRecipe}
-            onSubmit={selectedItems => setSelectedItems(selectedItems)}
+            onSubmit={selectedItems => {
+              setSelectedItems(selectedItems);
+              setActiveStage(3);
+            }
+            }
           />
         </StageWrapper>
       )}
 
-      {/* {stages.includes(3) && (
+      { stages.includes(3) && (
         <StageWrapper>
           <Stage3
-          selectedItems={}
+            selectedItems={selectedItems}
+            chosenRecipe={chosenRecipe}
           />
         </StageWrapper>
-      )} */}
+      )}
     </div>
   );
 };

@@ -4,33 +4,22 @@ import { Button } from "antd";
 import SelectList from "../../../components/selectList";
 import groceries from "../../../data/groceries.json";
 
-const Stage3 = ({ leftovers, onSubmit }) => {
+const Stage3 = ({ selectedItems, onSubmit, chosenRecipe }) => {
+  
   //   Stage 3 - Do you also have this ingredient?
-  const [selectedItems, setSelectedItems] = useState([]);
-
-  const leftoversTitles = leftovers.map(l => l.title);
-  const groceriesTitles = leftovers.map(g => g.title);
-
-  const selectItem = item => {
-    if (this.state.selectedItems.indexOf(item) === -1) {
-      setSelectedItems([...this.state.selectedItems, item]);
-    } else {
-      const newItems = _.pull(this.state.selectedItems, item);
-      setSelectedItems(newItems);
-    }
-  };
+  const selectedAsTitle = selectedItems.map(_ => _.title);
+  const ingredientsAsTitle = chosenRecipe.ingredients.map(_ => _.title);
+  const itemsToBeShopped = groceries.filter(_ => ingredientsAsTitle.includes(_.title) && !selectedAsTitle.includes(_.title));
+  const [shoppedProducts, setShoppedProducts] = useState([itemsToBeShopped]);
 
   return (
     <div>
-      <h1>Do you also have these items?</h1>
+      <h1>Your shopping list</h1>
       <SelectList
-        items={groceries.filter(g => !leftoversTitles.includes(g.title))}
-        selectedItems={selectedItems}
-        onSelect={item => setSelectedItems([...selectedItems, item])}
+        items={itemsToBeShopped}
+        selectedItems={itemsToBeShopped}
+        onSelect={item => setShoppedProducts([...shoppedProducts, item])}
       />
-      <Button block onClick={() => onSubmit(selectedItems)}>
-        Submit
-      </Button>
     </div>
   );
 };
