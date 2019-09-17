@@ -6,13 +6,20 @@
 
 # Solution
 ## The Planned Leftovers
-Our solution which is a web app that gives recommeneded amount of ingredients to purchase, and at the same time, inspiration for leftoverfood tackles these 2 challenges:
+Our solution is a food planning platform (web app) that provides inspiration for leftover food and changes consumers' purchasing habits by recommending the right amount of ingredients to purchase, and this tackles these 2 challenges:
 
 ### Food wastage
+By recommending consumers' recipes that they can cook with the leftover food or ingredients that they have, it allows them to not throw their food away, but make use of them wisely. 
+Features:
+- Inspire through recommendation of recipes related to leftover food
+- Be notified of when there are additional food that is not used yet so actions can be taken
 
 ### Poor Purchase Planning
-Our allows households to plan their meals beforehand, and gives them the exact amount of ingredients to buy based on what they lack in their kitchen. Users get their shopping list and are able to buy whatever is necessary, limiting their food waste. This behaviour encourages households to consider planning their meals, and allows households to make better decisions when it comes to their purchasing habits.
-
+Our solution allows households to plan their meals beforehand, and gives them the exact amount of ingredients to buy based on what they lack in their kitchen. Users get their shopping list and are able to buy whatever is necessary, limiting their food waste. This behaviour encourages households to consider planning their meals, and make better decisions when it comes to their purchasing habits.
+Features:
+- Know exactly how much ingredients would be needed for the meals
+- Buy carefully
+- Cultivate habit of planning so that ingredients are optimised
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
