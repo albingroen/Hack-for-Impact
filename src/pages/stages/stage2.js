@@ -30,10 +30,6 @@ const HeaderContainer = styled.div`
   align-items: center;
 `;
 
-const H2 = styled.h2`
-  font-family: Muli;
-`;
-
 class Stage2 extends React.Component {
   state = {
     selectedItems: []
@@ -59,7 +55,7 @@ class Stage2 extends React.Component {
     return (
       <div>
         <HeaderContainer>
-          <H2>You've selected last time</H2>
+          <h2>You've selected last time</h2>
           <RecipeCard recipe={recipe} />
         </HeaderContainer>
         <SelectContainer>
