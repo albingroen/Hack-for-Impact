@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "antd";
+import Stage2 from "./stages/stage2";
+import Stage3 from "./stages/stage2";
+import Stage4 from "./stages/stage2";
 
 const Start = ({}) => {
   const { stage, setStage } = useState(0);
+  const [ingredients, setIngredients] = useState([]);
+  const [leftovers, setLeftovers] = useState([]);
 
   return (
     <div style={{ padding: "50px" }}>
@@ -11,20 +16,23 @@ const Start = ({}) => {
       <Button>I want to plan my meals</Button>
 
       {/* Stage 2 - Depending on the previous answer what do you have left over? */}
+      {stage === 2 && (
+        <Stage2
+          previousMeal={0}
+          onSubmit={leftoversArray => console.log(leftoversArray)}
+        />
+      )}
 
       {/* Stage 3 - Do you also have this ingredient? */}
+      {stage === 3 && (
+        <Stage3
+          leftovers={leftovers}
+          onSubmit={ingredients => console.log(ingredients)}
+        />
+      )}
 
       {/* Stage 4 - We suggest you make this meal */}
-
-      {/* {stage === 2 && (
-        // Leftovers
-        <div>
-          <h2>What do you have over?</h2>
-          <div>Pasta</div>
-          <div>Peso</div>
-          <Button>Submit</Button>
-        </div>
-      )} */}
+      {stage === 4 && <Stage4 ingredients={[...ingredients, ...leftovers]} />}
     </div>
   );
 };
