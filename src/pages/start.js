@@ -36,7 +36,10 @@ const Start = ({}) => {
       {stage === 3 && (
         <Stage3
           leftovers={leftovers}
-          onSubmit={choseningredients => setIngredients(choseningredients)}
+          onSubmit={choseningredients => {
+            setIngredients(choseningredients);
+            setActiveStage(4);
+          }}
         />
       )}
 
