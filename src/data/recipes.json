@@ -7,22 +7,22 @@
       {
         "title": "Ground beef",
         "amount": 300,
-        "measure": "grams"
+        "measure": "gram(s)"
       },
       {
         "title": "Pasta",
         "amount": 350,
-        "measure": "grams"
+        "measure": "gram(s)"
       },
       {
         "title": "Salt",
         "amount": 4,
-        "measure": "grams"
+        "measure": "gram(s)"
       },
       {
         "title": "Parmesan",
         "amount": 1,
-        "measure": "servings"
+        "measure": "serving(s)"
       }
     ]
   },
@@ -34,22 +34,22 @@
       {
         "title": "Pesto",
         "amount": 15,
-        "measure": "grams"
+        "measure": "gram(s)"
       },
       {
         "title": "Pasta",
         "amount": 350,
-        "measure": "grams"
+        "measure": "gram(s)"
       },
       {
         "title": "Salt",
         "amount": 4,
-        "measure": "grams"
+        "measure": "gram(s)"
       },
       {
         "title": "Parmesan",
         "amount": 1,
-        "measure": "servings"
+        "measure": "serving(s)"
       }
     ]
   }

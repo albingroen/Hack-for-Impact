@@ -10,14 +10,14 @@ const Stage3 = ({ leftovers, onSubmit }) => {
 
   return (
     <div>
-      <h1>Do you also have these items?</h1>
+      <h1>Do you have any of these?</h1>
       <SelectList
         items={groceries.filter(g => !leftoversTitles.includes(g.title))}
         selectedItems={selectedItems}
         onSelect={item => setSelectedItems([...selectedItems, item])}
       />
       <Button block onClick={() => onSubmit(selectedItems)}>
-        Submit
+        Continue
       </Button>
     </div>
   );

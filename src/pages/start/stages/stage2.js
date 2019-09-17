@@ -55,11 +55,11 @@ class Stage2 extends React.Component {
     return (
       <div>
         <HeaderContainer>
-          <h2>You've selected last time</h2>
+          <h2>Last meal you planned</h2>
           <RecipeCard recipe={recipe} />
         </HeaderContainer>
         <SelectContainer>
-          <CenteredText>Tell us what has left over</CenteredText>
+          <CenteredText>Tell us what leftovers you have</CenteredText>
           <SelectList
             items={ingredients}
             selectedItems={selectedItems}
@@ -67,7 +67,7 @@ class Stage2 extends React.Component {
           />
           <ButtonContainer>
             <Button onClick={() => onSubmit(selectedItems)} block>
-              Confirm
+              Continue
             </Button>
           </ButtonContainer>
         </SelectContainer>
