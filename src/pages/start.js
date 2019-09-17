@@ -5,7 +5,7 @@ import Stage3 from "./stages/stage3";
 import Stage4 from "./stages/stage4";
 
 const Start = ({}) => {
-  const [stage, setActiveStage] = useState(4);
+  const [stage, setActiveStage] = useState(3);
   const [ingredients, setIngredients] = useState([]);
   const [leftovers, setLeftovers] = useState([]);
 
@@ -36,7 +36,7 @@ const Start = ({}) => {
       {stage === 3 && (
         <Stage3
           leftovers={leftovers}
-          onSubmit={ingredients => console.log(ingredients)}
+          onSubmit={choseningredients => setIngredients(choseningredients)}
         />
       )}
 
