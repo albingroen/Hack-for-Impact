@@ -5,7 +5,7 @@ import Stage3 from "./stages/stage2";
 import Stage4 from "./stages/stage2";
 
 const Start = ({}) => {
-  const { stage, setStage } = useState(0);
+  const [stage, setActiveStage] = useState(0);
   const [ingredients, setIngredients] = useState([]);
   const [leftovers, setLeftovers] = useState([]);
 
@@ -21,8 +21,8 @@ const Start = ({}) => {
       }}
     >
       <h1>What do you want to do?</h1>
-      <Button>I have leftovers</Button>
-      <Button>I want to plan my meals</Button>
+      <Button onClick={() => setActiveStage(2)}>I have leftovers</Button>
+      <Button onClick={() => setActiveStage(2)}>I want to plan my meals</Button>
 
       {/* Stage 2 - Depending on the previous answer what do you have left over? */}
       {stage === 2 && (

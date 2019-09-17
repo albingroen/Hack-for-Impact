@@ -18,5 +18,10 @@
     "title": "Parmesan",
     "amount": 150,
     "measure": "grams"
+  },
+  {
+    "title": "Ground beef",
+    "amount": 300,
+    "measure": "grams"
   }
 ]
