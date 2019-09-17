@@ -31,9 +31,9 @@ class Stage2 extends React.Component {
     const { selectedItems } = this.state;
     return (
       <div>
-        <h2>You've selected last time</h2>
+        <h2>Previous meal you had</h2>
         <RecipeCard recipe={recipe} />
-        <div>Tell us what has left over</div>
+        <div>Tell us what leftovers you have:</div>
         <SelectList
           items={ingredients}
           selectedItems={selectedItems}
