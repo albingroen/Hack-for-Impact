@@ -3,9 +3,10 @@ import { Card, List } from 'antd';
 
 const { Meta } = Card;
 
-const RecipeCard = ({ recipe, showIngredients = false }) => (
+const RecipeCard = ({ recipe, showIngredients = false, hoverable = false }) => (
   <Card
-    style={{ width: 240 }}
+    hoverable={hoverable}  
+    style={{ width: 240, marginBottom: ".5rem", }}
     cover={<img alt="example" src={recipe.imgUrl} />}
   >
     <Meta title={recipe.title} />
