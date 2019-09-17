@@ -47,6 +47,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  - 💻JavaScript
  - 💅 Styled components
  - 🌄 Unsplash
+ - 🎨 Ant-design
 
 ## Available Scripts
 
