@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from 'antd';
-import styled from 'styled-components';
+import { Button } from "antd";
+import styled from "styled-components";
 
 import SelectList from "../../components/selectList";
 import _ from "lodash";
@@ -60,9 +60,15 @@ class Stage2 extends React.Component {
         </HeaderContainer>
         <SelectContainer>
           <CenteredText>Tell us what has left over</CenteredText>
-          <SelectList items={ingredients} selectedItems={selectedItems} onSelect={this.selectItem.bind(this)} />
+          <SelectList
+            items={ingredients}
+            selectedItems={selectedItems}
+            onSelect={this.selectItem.bind(this)}
+          />
           <ButtonContainer>
-            <Button onClick={() => onSubmit(selectedItems)} type="primary">Confirm</Button>
+            <Button onClick={() => onSubmit(selectedItems)} block>
+              Confirm
+            </Button>
           </ButtonContainer>
         </SelectContainer>
       </div>
