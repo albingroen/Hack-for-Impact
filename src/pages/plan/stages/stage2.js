@@ -2,11 +2,11 @@ import React from "react";
 import { Button } from "antd";
 import styled from "styled-components";
 
-import SelectList from "../../components/selectList";
+import SelectList from "../../../components/selectList";
 import _ from "lodash";
 
-import recipes from "../../data/recipes";
-import RecipeCard from "../../components/RecipeCard";
+import recipes from "../../../data/recipes";
+import RecipeCard from "../../../components/RecipeCard";
 
 const CenteredText = styled.div`
   text-align: center;

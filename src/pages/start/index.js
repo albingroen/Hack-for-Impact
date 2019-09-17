@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "antd";
-import StageWrapper from "../components/stageWrapper";
+import StageWrapper from "../../components/stageWrapper";
 import Stage2 from "./stages/stage2";
 import Stage3 from "./stages/stage3";
 import Stage4 from "./stages/stage4";

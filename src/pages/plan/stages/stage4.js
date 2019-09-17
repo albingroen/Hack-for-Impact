@@ -1,7 +1,7 @@
 import React from "react";
 
-import RecipeCard from "../../components/RecipeCard";
-import recipes from "../../data/recipes";
+import RecipeCard from "../../../components/RecipeCard";
+import recipes from "../../../data/recipes";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`

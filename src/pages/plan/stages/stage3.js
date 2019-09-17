@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import { Button } from "antd";
-import SelectList from "../../components/selectList";
-import groceries from "../../data/groceries.json";
+import SelectList from "../../../components/selectList";
+import groceries from "../../../data/groceries.json";
 
 const Stage3 = ({ leftovers, onSubmit }) => {
   //   Stage 3 - Do you also have this ingredient?
