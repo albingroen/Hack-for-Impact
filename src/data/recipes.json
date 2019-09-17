@@ -2,7 +2,7 @@
   {
     "title": "Pasta bolognese",
     "servingSize": 4,
-    "imgUrl": "https://source.unsplash.com/JDEEsQKEm7I/240x160",
+    "imgUrl": "pasta-bolognese.jpeg",
     "ingredients": [
       {
         "title": "Ground beef",
@@ -29,7 +29,7 @@
   {
     "title": "Pestopasta",
     "servingSize": 4,
-    "imgUrl": "https://source.unsplash.com/12eHC6FxPyg/240x160",
+    "imgUrl": "pasta-pesto.jpeg",
     "ingredients": [
       {
         "title": "Pesto",
