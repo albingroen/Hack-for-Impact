@@ -7,7 +7,9 @@ const Stage4 = ({ ingredients }) => {
 
   recipes.forEach(recipe => {
     ingredients.forEach(ingredient => {
-      if (recipe.includes(ingredient)) {
+      const recipeTitles = recipe.ingredients.map(i => i.title);
+
+      if (recipeTitles.includes(ingredient.title)) {
         mealToMake = recipe.title;
       } else {
         mealToMake = undefined;
