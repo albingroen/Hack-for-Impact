@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 import StageWrapper from "../../components/stageWrapper";
 import Stage2 from "./stages/stage2";
 import Stage3 from "./stages/stage3";
@@ -28,9 +29,9 @@ const Start = ({}) => {
       <StageWrapper>
         <h1>What do you want to do?</h1>
         <Button onClick={() => setActiveStage(2)}>I have leftovers</Button>
-        <Button onClick={() => setActiveStage(2)}>
-          I want to plan my meals
-        </Button>
+        <Link to="/plan">
+          <Button>I want to plan my meals</Button>
+        </Link>
       </StageWrapper>
 
       {/* Stage 2 - Depending on the previous answer what do you have left over? */}
