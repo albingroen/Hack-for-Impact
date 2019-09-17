@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { List } from "antd";
 import groceries from "../../../data/groceries.json";
 
@@ -10,7 +10,6 @@ const Stage3 = ({ selectedItems, onSubmit, chosenRecipe }) => {
     _ =>
       ingredientsAsTitle.includes(_.title) && !selectedAsTitle.includes(_.title)
   );
-  const [shoppedProducts, setShoppedProducts] = useState([itemsToBeShopped]);
 
   return (
     <div>
