@@ -20,7 +20,7 @@ const Start = ({}) => {
         maxWidth: "500px",
         background: "white",
         minHeight: "100vh",
-        margin: "100px auto",
+        margin: "20px auto",
         padding: "20px",
         borderRadius: "20px"
       }}
