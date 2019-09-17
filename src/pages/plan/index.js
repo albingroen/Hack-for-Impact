@@ -39,7 +39,11 @@ const Plan = ({}) => {
         <HeaderContainer>
           {recepies.map(r => (
             <div onClick={() => setChosenRecipe(r)}>
-              <RecipeCard hoverable recipe={r}></RecipeCard>
+              <RecipeCard
+                selected={chosenRecipe && r.title === chosenRecipe.title}
+                hoverable
+                recipe={r}
+              ></RecipeCard>
             </div>
           ))}
         </HeaderContainer>
