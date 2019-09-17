@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "antd";
 import StageWrapper from "../../components/stageWrapper";
 import Stage2 from "./stages/stage2";
 import Stage3 from "./stages/stage3";
@@ -15,8 +16,9 @@ const HeaderContainer = styled.div`
 
 const Plan = ({}) => {
   const [stages, setActiveStages] = useState([0]);
-  const [ingredients, setIngredients] = useState([]);
-  const [leftovers, setLeftovers] = useState([]);
+  // const [ingredients, setIngredients] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [chosenRecipe, setChosenRecipe] = useState();
 
   const setActiveStage = stage => {
     setActiveStages([...stages, stage]);
@@ -37,36 +39,34 @@ const Plan = ({}) => {
         <h1>What do you want to eat?</h1>
         <HeaderContainer>
           {recepies.map(r => (
-            <RecipeCard recipe={r}></RecipeCard>
+            <div onClick={() => setChosenRecipe(r)}>
+              <RecipeCard recipe={r}></RecipeCard>
+            </div>
           ))}
         </HeaderContainer>
+        {chosenRecipe && (
+          <Button onClick={() => setActiveStage(2)} block>
+            Continue
+          </Button>
+        )}
       </StageWrapper>
 
-      {/* Stage 2 - Depending on the previous answer what do you have left over? */}
       {stages.includes(2) && (
         <StageWrapper>
           <Stage2
-            previousMeal={0}
-            onSubmit={chosenLeftOvers => {
-              setLeftovers(chosenLeftOvers);
-              setActiveStage(3);
-            }}
+            chosenRecipe={chosenRecipe}
+            onSubmit={selectedItems => setSelectedItems(selectedItems)}
           />
         </StageWrapper>
       )}
 
-      {/* Stage 3 - Do you also have this ingredient? */}
-      {stages.includes(3) && (
+      {/* {stages.includes(3) && (
         <StageWrapper>
           <Stage3
-            leftovers={leftovers}
-            onSubmit={choseningredients => {
-              setIngredients(choseningredients);
-              setActiveStage(4);
-            }}
+          selectedItems={}
           />
         </StageWrapper>
-      )}
+      )} */}
     </div>
   );
 };

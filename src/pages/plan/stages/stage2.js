@@ -48,20 +48,19 @@ class Stage2 extends React.Component {
   }
 
   render() {
-    const { onSubmit, previousMeal } = this.props;
-    const recipe = recipes[previousMeal];
-    const { title, ingredients } = recipe;
+    const { onSubmit, chosenRecipe } = this.props;
     const { selectedItems } = this.state;
+
     return (
       <div>
         <HeaderContainer>
-          <h2>You've selected last time</h2>
-          <RecipeCard recipe={recipe} />
+          <h2>You've selected the</h2>
+          <RecipeCard recipe={chosenRecipe} />
         </HeaderContainer>
         <SelectContainer>
-          <CenteredText>Tell us what has left over</CenteredText>
+          <CenteredText>What do you already have?</CenteredText>
           <SelectList
-            items={ingredients}
+            items={chosenRecipe.ingredients}
             selectedItems={selectedItems}
             onSelect={this.selectItem.bind(this)}
           />
