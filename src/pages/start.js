@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "antd";
 import Stage2 from "./stages/stage2";
-import Stage3 from "./stages/stage2";
-import Stage4 from "./stages/stage2";
+import Stage3 from "./stages/stage3";
+import Stage4 from "./stages/stage4";
 
 const Start = ({}) => {
-  const [stage, setActiveStage] = useState(0);
+  const [stage, setActiveStage] = useState(4);
   const [ingredients, setIngredients] = useState([]);
   const [leftovers, setLeftovers] = useState([]);
 
