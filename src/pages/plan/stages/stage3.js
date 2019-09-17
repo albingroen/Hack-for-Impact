@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import _ from "lodash";
-import { Button } from "antd";
+import { List } from "antd";
 import SelectList from "../../../components/selectList";
 import groceries from "../../../data/groceries.json";
 
@@ -15,10 +15,14 @@ const Stage3 = ({ selectedItems, onSubmit, chosenRecipe }) => {
   return (
     <div>
       <h1>Your shopping list</h1>
-      <SelectList
-        items={itemsToBeShopped}
-        selectedItems={itemsToBeShopped}
-        onSelect={item => setShoppedProducts([...shoppedProducts, item])}
+      <List
+        itemLayout="horizontal"
+        dataSource={itemsToBeShopped}
+        renderItem={item => (
+          <List.Item>
+            {item.title}
+          </List.Item>
+        )}
       />
     </div>
   );
