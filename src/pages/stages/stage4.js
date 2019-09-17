@@ -24,7 +24,7 @@ const Stage4 = ({ ingredients }) => {
       <h1>We suggest you make this meal</h1>
       {recipe ? (
         <HeaderContainer>
-          <RecipeCard recipe={recipe} />
+          <RecipeCard showIngredients recipe={recipe} />
         </HeaderContainer>
       ) : (
         <h2>"Could not find a meal"</h2>
